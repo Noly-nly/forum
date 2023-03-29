@@ -110,3 +110,19 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2023-03-29 18:46:20,052 INFO [main] com.noly.forum.MailTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
 2023-03-29 18:46:31,236 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
 2023-03-29 18:46:31,757 INFO [main] com.noly.forum.MailTests [StartupInfoLogger.java:61] Started MailTests in 12.048 seconds (JVM running for 12.825)
+2023-03-29 20:11:39,800 INFO [main] com.noly.forum.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 1.8.0_362 on Noly with PID 12224 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-03-29 20:11:39,801 INFO [main] com.noly.forum.MailTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-03-29 20:11:41,194 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-03-29 20:11:41,511 INFO [main] com.noly.forum.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.951 seconds (JVM running for 2.44)
+2023-03-29 20:13:50,765 INFO [main] com.noly.forum.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 1.8.0_362 on Noly with PID 14372 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-03-29 20:13:50,767 INFO [main] com.noly.forum.MailTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-03-29 20:13:51,899 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-03-29 20:13:52,249 INFO [main] com.noly.forum.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.714 seconds (JVM running for 2.183)
+2023-03-29 20:14:07,184 INFO [main] com.noly.forum.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 1.8.0_362 on Noly with PID 17776 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-03-29 20:14:07,186 INFO [main] com.noly.forum.MailTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-03-29 20:14:08,287 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-03-29 20:14:08,598 INFO [main] com.noly.forum.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.65 seconds (JVM running for 2.125)
+2023-03-29 20:27:54,899 INFO [main] com.noly.forum.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 1.8.0_362 on Noly with PID 8356 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-03-29 20:27:54,901 INFO [main] com.noly.forum.MailTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-03-29 20:27:56,116 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-03-29 20:27:56,461 INFO [main] com.noly.forum.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.829 seconds (JVM running for 2.346)
