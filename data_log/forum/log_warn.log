@@ -1,0 +1,4 @@
+2023-03-29 15:08:05,870 WARN [main] c.n.f.LoggerTests [LoggerTests.java:23] warn log
+2023-03-29 15:09:56,703 WARN [main] c.n.f.LoggerTests [LoggerTests.java:23] warn log
+2023-03-29 15:12:23,495 WARN [main] com.noly.forum.LoggerTests [LoggerTests.java:23] warn log
+2023-03-29 15:15:07,189 WARN [main] com.noly.forum.LoggerTests [LoggerTests.java:23] warn log

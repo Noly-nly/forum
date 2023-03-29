@@ -1,0 +1,20 @@
+2023-03-29 15:08:04,217 INFO [main] c.n.f.LoggerTests [StartupInfoLogger.java:55] Starting LoggerTests using Java 1.8.0_362 on Noly with PID 15628 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-03-29 15:08:04,218 INFO [main] c.n.f.LoggerTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-03-29 15:08:05,344 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-03-29 15:08:05,695 INFO [main] c.n.f.LoggerTests [StartupInfoLogger.java:61] Started LoggerTests in 1.746 seconds (JVM running for 2.308)
+2023-03-29 15:08:05,859 INFO [main] c.n.f.LoggerTests [LoggerTests.java:22] info log
+2023-03-29 15:09:55,031 INFO [main] c.n.f.LoggerTests [StartupInfoLogger.java:55] Starting LoggerTests using Java 1.8.0_362 on Noly with PID 15720 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-03-29 15:09:55,033 INFO [main] c.n.f.LoggerTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-03-29 15:09:56,206 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-03-29 15:09:56,550 INFO [main] c.n.f.LoggerTests [StartupInfoLogger.java:61] Started LoggerTests in 1.769 seconds (JVM running for 2.334)
+2023-03-29 15:09:56,703 INFO [main] c.n.f.LoggerTests [LoggerTests.java:22] info log
+2023-03-29 15:12:21,714 INFO [main] com.noly.forum.LoggerTests [StartupInfoLogger.java:55] Starting LoggerTests using Java 1.8.0_362 on Noly with PID 24440 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-03-29 15:12:21,716 INFO [main] com.noly.forum.LoggerTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-03-29 15:12:22,934 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-03-29 15:12:23,283 INFO [main] com.noly.forum.LoggerTests [StartupInfoLogger.java:61] Started LoggerTests in 1.894 seconds (JVM running for 2.638)
+2023-03-29 15:12:23,494 INFO [main] com.noly.forum.LoggerTests [LoggerTests.java:22] info log
+2023-03-29 15:15:05,609 INFO [main] com.noly.forum.LoggerTests [StartupInfoLogger.java:55] Starting LoggerTests using Java 1.8.0_362 on Noly with PID 12296 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-03-29 15:15:05,611 INFO [main] com.noly.forum.LoggerTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-03-29 15:15:06,739 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-03-29 15:15:07,041 INFO [main] com.noly.forum.LoggerTests [StartupInfoLogger.java:61] Started LoggerTests in 1.684 seconds (JVM running for 2.265)
+2023-03-29 15:15:07,189 INFO [main] com.noly.forum.LoggerTests [LoggerTests.java:22] info log

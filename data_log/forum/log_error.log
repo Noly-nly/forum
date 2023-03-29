@@ -1,0 +1,4 @@
+2023-03-29 15:08:05,870 ERROR [main] c.n.f.LoggerTests [LoggerTests.java:24] error log
+2023-03-29 15:09:56,703 ERROR [main] com.noly.forum.LoggerTests [LoggerTests.java:24] error log
+2023-03-29 15:12:23,495 ERROR [main] com.noly.forum.LoggerTests [LoggerTests.java:24] error log
+2023-03-29 15:15:07,189 ERROR [main] com.noly.forum.LoggerTests [LoggerTests.java:24] error log
