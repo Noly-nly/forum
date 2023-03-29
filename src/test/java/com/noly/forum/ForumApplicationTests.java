@@ -3,7 +3,7 @@ package com.noly.forum;
 import com.noly.forum.config.AlphaConfig;
 import com.noly.forum.dao.AlphaDao;
 import com.noly.forum.service.AlphaService;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.SimpleBeanInfoFactory;
