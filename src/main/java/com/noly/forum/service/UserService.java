@@ -2,6 +2,7 @@ package com.noly.forum.service;
 
 import com.noly.forum.dao.UserMapper;
 import com.noly.forum.entity.User;
+import com.noly.forum.util.ForumConstant;
 import com.noly.forum.util.ForumUtil;
 import com.noly.forum.util.MailClient;
 import org.apache.commons.lang3.StringUtils;
@@ -17,7 +18,7 @@ import java.util.Map;
 import java.util.Random;
 
 @Service
-public class UserService {
+public class UserService implements ForumConstant {
 
     @Autowired
     private UserMapper userMapper;
@@ -89,12 +90,26 @@ public class UserService {
         Context context = new Context();
         context.setVariable("email", user.getEmail());
         // http://localhost:8080/forum/activation/userId/activateCode
-        String url = domain + contextPath + "/activation" + user.getId() + "/" + user.getActivationCode();
+        String url = domain + contextPath + "/activation/" + user.getId() + "/" + user.getActivationCode();
         context.setVariable("url", url);
         String content = templateEngine.process("/mail/activation", context);
         mailClient.sendMail(user.getEmail(), "激活账号", content);
 
         return map;
+    }
+
+    // TODO: 激活
+    public int activation(int userId, String activateCode) {
+
+        User user = userMapper.selectById(userId);
+        if (user.getStatus() == 1) {
+            return ACTIVATION_REPEAT;
+        } else if (user.getActivationCode().equals(activateCode)) {
+            userMapper.updateStatus(userId,1);
+            return ACTIVATION_SUCCESS;
+        } else {
+            return ACTIVATION_FAILURE;
+        }
     }
 
 }
