@@ -1,8 +1,10 @@
-2023-03-29 15:08:05,870 WARN [main] c.n.f.LoggerTests [LoggerTests.java:23] warn log
-2023-03-29 15:09:56,703 WARN [main] c.n.f.LoggerTests [LoggerTests.java:23] warn log
-2023-03-29 15:12:23,495 WARN [main] com.noly.forum.LoggerTests [LoggerTests.java:23] warn log
-2023-03-29 15:15:07,189 WARN [main] com.noly.forum.LoggerTests [LoggerTests.java:23] warn log
-2023-03-29 16:59:53,247 WARN [main] org.springframework.web.context.support.GenericWebApplicationContext [AbstractApplicationContext.java:591] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailClient': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
-2023-03-29 17:07:11,986 WARN [main] org.springframework.web.context.support.GenericWebApplicationContext [AbstractApplicationContext.java:591] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailClient': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
-2023-03-29 18:02:06,418 WARN [main] org.springframework.web.context.support.GenericWebApplicationContext [AbstractApplicationContext.java:591] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailClient': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
-2023-03-29 18:07:11,424 WARN [main] org.springframework.web.context.support.GenericWebApplicationContext [AbstractApplicationContext.java:591] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailClient': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
+2023-03-30 15:36:32,397 WARN [Thread-8] org.apache.catalina.loader.WebappClassLoaderBase [DirectJDKLog.java:173] The web application [forum] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
