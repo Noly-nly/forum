@@ -1,6 +1,8 @@
 package com.noly.forum.service;
 
+import com.noly.forum.dao.LoginTicketMapper;
 import com.noly.forum.dao.UserMapper;
+import com.noly.forum.entity.LoginTicket;
 import com.noly.forum.entity.User;
 import com.noly.forum.util.ForumConstant;
 import com.noly.forum.util.ForumUtil;
@@ -28,6 +30,9 @@ public class UserService implements ForumConstant {
 
     @Autowired
     private TemplateEngine templateEngine;
+
+    @Autowired
+    private LoginTicketMapper loginTicketMapper;
 
     @Value("${forum.path.domain}")
     private String domain;
@@ -110,6 +115,59 @@ public class UserService implements ForumConstant {
         } else {
             return ACTIVATION_FAILURE;
         }
+    }
+
+    // TODO: 登录
+    public Map<String, Object> login(String username, String password,int expiredSeconds) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        // 空值处理
+        if (StringUtils.isBlank(username)) {
+            map.put("usernameMsg", "账号不能为空！");
+            return map;
+        }
+        if (StringUtils.isBlank(password)) {
+            map.put("passwordMsg", "密码不能为空！");
+            return map;
+        }
+
+        // 验证账号
+        User user = userMapper.selectByName(username);
+        if (user == null) {
+            map.put("usernameMsg", "该账号不存在！");
+            return map;
+        }
+
+        // 验证账号状态
+        if (user.getStatus() == 0) {
+            map.put("usernameMsg", "该账号未激活！");
+            return map;
+        }
+
+        // 验证密码
+        password = ForumUtil.md5(password + user.getSalt());
+        if (!user.getPassword().equals(password)) {
+            map.put("passwordMsg", "密码不正确！");
+            return map;
+        }
+
+        // 上面验证无误后，生成登录凭证
+        LoginTicket loginTicket = new LoginTicket();
+        loginTicket.setUserId(user.getId());
+        loginTicket.setTicket(ForumUtil.generateUUID());
+        loginTicket.setStatus(0);
+        loginTicket.setExpired(new Date(System.currentTimeMillis() + expiredSeconds * 1000));
+
+        loginTicketMapper.insertLoginTicket(loginTicket);
+        map.put("ticket", loginTicket.getTicket());
+
+        return map;
+    }
+
+    // TODO: 退出登录
+    public void logout(String ticket) {
+        loginTicketMapper.updateStatus(ticket, 1);
     }
 
 }
