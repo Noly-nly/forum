@@ -170,4 +170,9 @@ public class UserService implements ForumConstant {
         loginTicketMapper.updateStatus(ticket, 1);
     }
 
+    // 查询登录凭证
+    public LoginTicket findLoginTicket(String ticket) {
+        return loginTicketMapper.selectByTicket(ticket);
+    }
+
 }
