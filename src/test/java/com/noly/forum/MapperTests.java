@@ -62,7 +62,7 @@ public class MapperTests {
         int rows = userMapper.updateStatus(150, 1);
         System.out.println(rows);
 
-        rows = userMapper.updateHeader(150, "http://www.nowcoder.com/102.png");
+        rows = userMapper.updateHeaderUrl(150, "http://www.nowcoder.com/102.png");
         System.out.println(rows);
 
         rows = userMapper.updatePassword(150, "hello");
