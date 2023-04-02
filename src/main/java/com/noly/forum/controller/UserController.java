@@ -1,5 +1,6 @@
 package com.noly.forum.controller;
 
+import com.noly.forum.annotation.LoginRequired;
 import com.noly.forum.entity.User;
 import com.noly.forum.service.UserService;
 
@@ -48,12 +49,14 @@ public class UserController {
     private HostHolder hostHolder;
 
     // 访问用户设置页面
+    @LoginRequired
     @RequestMapping(path = "/setting", method = RequestMethod.GET)
     public String getSettingPage() {
         return "/site/setting";
     }
 
     // 在用户设置页面，上传用户头像图片
+    @LoginRequired
     @RequestMapping(path = "/upload", method = RequestMethod.POST)
     public String uploadHeaderUrl(MultipartFile headerImage, Model model) {
         if (headerImage == null) {
