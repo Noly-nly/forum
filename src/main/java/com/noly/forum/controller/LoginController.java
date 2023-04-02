@@ -49,6 +49,7 @@ public class LoginController implements ForumConstant {
     // TODO: 访问登录页面
     @RequestMapping(path = "/login", method = RequestMethod.GET)
     public String getLoginPage() {
+
         return "/site/login";
     }
 

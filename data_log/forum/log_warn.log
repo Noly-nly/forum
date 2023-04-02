@@ -1,22 +1,2 @@
-2023-03-31 21:29:27,153 WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m49s794ms693µs900ns).
-2023-03-31 21:36:17,658 WARN [Thread-8] org.apache.catalina.loader.WebappClassLoaderBase [DirectJDKLog.java:173] The web application [forum] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:750)
-2023-03-31 21:36:17,669 WARN [Thread-8] org.apache.catalina.loader.WebappClassLoaderBase [DirectJDKLog.java:173] The web application [forum] appears to have started a thread named [logback-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:750)
-2023-03-31 21:36:18,197 WARN [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java:591] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'homeController' defined in file [D:\Apps_IDE\Projects\forum\target\classes\com\noly\forum\controller\HomeController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.noly.forum.controller.HomeController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@5e83e75b]
+2023-04-02 10:13:35,990 WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m39s87ms418µs600ns).
+2023-04-02 10:15:40,636 WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s623ms735µs400ns).
