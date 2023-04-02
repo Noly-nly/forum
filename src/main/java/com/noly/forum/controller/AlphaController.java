@@ -40,8 +40,8 @@ public class AlphaController {
     public void http(HttpServletRequest request, HttpServletResponse response) {
 
         //获取请求数据
-        System.out.println(request.getMethod());
-        System.out.println(request.getServletPath());
+        System.out.println("request,getMethod():" + request.getMethod());
+        System.out.println("request.getServletPath():" + request.getServletPath());
         Enumeration<String> headerNames = request.getHeaderNames();
         while (headerNames.hasMoreElements()){
             String headerName = headerNames.nextElement();
@@ -63,7 +63,7 @@ public class AlphaController {
 
     // TODO:Get请求处理，用于获取某些数据，默认请求方式
 
-    // 查询所有学生路径: /students?current=1&limit=20
+    // 查询所有学生路径: /students?current=2&limit=20
     @RequestMapping(path = "/students", method = RequestMethod.GET)
     @ResponseBody
     public String getStudents(
@@ -72,7 +72,7 @@ public class AlphaController {
 
         System.out.println(current);
         System.out.println(limit);
-        return "Some students";
+        return "Some students:" + current + ":" + limit;
     }
 
     // 查询一个学生: /student/123
@@ -81,7 +81,7 @@ public class AlphaController {
     public String getStudent(@PathVariable("id") int id) {
 
         System.out.println(id);
-        return "A student";
+        return "A student:" + id;
     }
 
     // TODO:Post请求处理
@@ -91,7 +91,7 @@ public class AlphaController {
 
         System.out.println(name);
         System.out.println(age);
-        return "success";
+        return "success:" + "name=" + name + ", age=" + age;
     }
 
     // TODO:响应HTML数据
@@ -114,7 +114,7 @@ public class AlphaController {
         return "demo/view";
     }
 
-    // 响应JSON数据（异步请求）
+    // TODO：响应JSON数据（异步请求）
     // Java对象 -> Json字符串数据 -> JS对象
 
     @RequestMapping(path = "/emp", method = RequestMethod.GET)

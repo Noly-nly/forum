@@ -94,8 +94,8 @@ public class UserController {
     }
 
     // 获取头像
-     @RequestMapping(path = "/header/{fileName}", method = RequestMethod.GET)
-    public void getHeader(@PathVariable("filename") String fileName, HttpServletResponse response) {
+    @RequestMapping(path = "/header/{fileName}", method = RequestMethod.GET)
+    public void getHeader(@PathVariable("fileName") String fileName, HttpServletResponse response) {
 
         // 服务器存放路径
         fileName = uploadPath + "/" + fileName;
