@@ -1,0 +1,12 @@
+2023-04-03 22:20:44,278 INFO [main] com.noly.forum.SensitiveTests [StartupInfoLogger.java:55] Starting SensitiveTests using Java 1.8.0_362 on Noly with PID 15988 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-03 22:20:44,283 INFO [main] com.noly.forum.SensitiveTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-04-03 22:20:45,802 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-04-03 22:20:46,040 INFO [main] com.noly.forum.SensitiveTests [StartupInfoLogger.java:61] Started SensitiveTests in 2.063 seconds (JVM running for 2.71)
+2023-04-03 22:23:36,519 INFO [main] com.noly.forum.SensitiveTests [StartupInfoLogger.java:55] Starting SensitiveTests using Java 1.8.0_362 on Noly with PID 18368 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-03 22:23:36,532 INFO [main] com.noly.forum.SensitiveTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-04-03 22:23:37,795 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-04-03 22:23:38,050 INFO [main] com.noly.forum.SensitiveTests [StartupInfoLogger.java:61] Started SensitiveTests in 1.766 seconds (JVM running for 2.24)
+2023-04-03 22:24:24,698 INFO [main] com.noly.forum.SensitiveTests [StartupInfoLogger.java:55] Starting SensitiveTests using Java 1.8.0_362 on Noly with PID 2736 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-03 22:24:24,700 INFO [main] com.noly.forum.SensitiveTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-04-03 22:24:25,976 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-04-03 22:24:26,241 INFO [main] com.noly.forum.SensitiveTests [StartupInfoLogger.java:61] Started SensitiveTests in 1.816 seconds (JVM running for 2.338)

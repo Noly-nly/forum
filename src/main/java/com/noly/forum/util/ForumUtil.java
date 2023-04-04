@@ -2,10 +2,13 @@ package com.noly.forum.util;
 
 
 
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.util.DigestUtils;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 @Component
@@ -23,4 +26,33 @@ public class ForumUtil {
         }
         return DigestUtils.md5DigestAsHex(key.getBytes());
     }
+
+    // code：编号，msg：提示，map：业务数据
+    public static String getJSONSting(int code, String msg, Map<String, Object> map) {
+        JSONObject json = new JSONObject();
+        json.put("code", code);
+        json.put("msg", msg);
+        if (map != null) {
+            for (String key : map.keySet()) {
+                json.put(key, map.get(key));
+            }
+        }
+        return json.toJSONString();
+    }
+
+    public static String getJSONSting(int code, String msg) {
+        return getJSONSting(code, msg, null);
+    }
+
+    public static String getJSONSting(int code) {
+        return getJSONSting(code, null, null);
+    }
+
+//    public static void main(String[] args) {
+//        Map<String, Object> map = new HashMap<>();
+//        map.put("name", "zhangsan");
+//        map.put("age", 25);
+//        System.out.println(getJSONSting(0, "ok", map));
+//    }
+
 }

@@ -99,7 +99,20 @@ public class MapperTests {
         loginTicketMapper.updateStatus("abc", 1);
         loginTicket = loginTicketMapper.selectByTicket("abc");
         System.out.println(loginTicket);
+    }
 
+    @Test
+    public void testInsertDiscussPost() {
+        DiscussPost discussPost = new DiscussPost();
+        discussPost.setUserId(111);
+        discussPost.setTitle("111");
+        discussPost.setContent("111");
+        discussPost.setType(111);
+        discussPost.setStatus(111);
+        discussPost.setCreateTime(new Date());
+        discussPost.setScore(111);
+
+        discussPostMapper.insertDiscussPost(discussPost);
     }
 
 }
