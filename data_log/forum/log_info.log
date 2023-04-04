@@ -339,3 +339,19 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2023-04-04 16:04:53,007 INFO [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
 2023-04-04 16:09:02,417 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
 2023-04-04 16:09:02,422 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2023-04-04 16:50:39,070 INFO [main] com.noly.forum.TransactionTests [StartupInfoLogger.java:55] Starting TransactionTests using Java 1.8.0_362 on Noly with PID 16988 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-04 16:50:39,072 INFO [main] com.noly.forum.TransactionTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-04-04 16:50:40,335 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-04-04 16:50:40,567 INFO [main] com.noly.forum.TransactionTests [StartupInfoLogger.java:61] Started TransactionTests in 1.761 seconds (JVM running for 2.289)
+2023-04-04 16:50:40,765 INFO [main] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2023-04-04 16:50:40,885 INFO [main] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2023-04-04 16:50:41,163 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2023-04-04 16:50:41,169 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2023-04-04 16:59:24,054 INFO [main] com.noly.forum.TransactionTests [StartupInfoLogger.java:55] Starting TransactionTests using Java 1.8.0_362 on Noly with PID 15808 (started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-04 16:59:24,056 INFO [main] com.noly.forum.TransactionTests [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-04-04 16:59:25,305 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-04-04 16:59:25,548 INFO [main] com.noly.forum.TransactionTests [StartupInfoLogger.java:61] Started TransactionTests in 1.733 seconds (JVM running for 2.218)
+2023-04-04 16:59:25,711 INFO [main] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2023-04-04 16:59:25,835 INFO [main] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2023-04-04 16:59:26,091 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2023-04-04 16:59:26,098 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
