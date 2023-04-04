@@ -21,5 +21,8 @@ public interface DiscussPostMapper {
     // 增加帖子
     Integer insertDiscussPost(DiscussPost post);
 
+    DiscussPost selectDiscussPostById(int id);
+
+
 
 }

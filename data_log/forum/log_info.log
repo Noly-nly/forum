@@ -295,3 +295,47 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2023-04-04 12:59:12,574 INFO [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
 2023-04-04 13:01:54,795 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
 2023-04-04 13:01:54,800 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2023-04-04 15:51:36,944 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:55] Starting ForumApplication using Java 1.8.0_362 on Noly with PID 8488 (D:\Apps_IDE\Projects\forum\target\classes started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-04 15:51:36,945 INFO [restartedMain] com.noly.forum.ForumApplication [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-04-04 15:51:36,973 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-04 15:51:36,974 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-04 15:51:37,692 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-04-04 15:51:37,698 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-04 15:51:37,698 INFO [restartedMain] org.apache.catalina.core.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-04-04 15:51:37,698 INFO [restartedMain] org.apache.catalina.core.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-04 15:51:37,737 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/forum] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-04-04 15:51:37,737 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 763 ms
+2023-04-04 15:51:38,079 INFO [restartedMain] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-04-04 15:51:38,177 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-04-04 15:51:38,186 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-04-04 15:51:38,195 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/forum'
+2023-04-04 15:51:38,202 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:61] Started ForumApplication in 1.549 seconds (JVM running for 2.049)
+2023-04-04 15:51:44,478 INFO [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/forum] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-04 15:51:44,478 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2023-04-04 15:51:44,478 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2023-04-04 15:51:44,497 INFO [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2023-04-04 15:51:44,578 INFO [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2023-04-04 16:04:43,561 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2023-04-04 16:04:43,565 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2023-04-04 16:04:47,469 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:55] Starting ForumApplication using Java 1.8.0_362 on Noly with PID 7900 (D:\Apps_IDE\Projects\forum\target\classes started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-04 16:04:47,470 INFO [restartedMain] com.noly.forum.ForumApplication [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-04-04 16:04:47,496 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-04 16:04:47,496 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-04 16:04:48,049 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-04-04 16:04:48,054 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-04 16:04:48,054 INFO [restartedMain] org.apache.catalina.core.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-04-04 16:04:48,054 INFO [restartedMain] org.apache.catalina.core.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-04 16:04:48,084 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/forum] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-04-04 16:04:48,085 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 588 ms
+2023-04-04 16:04:48,364 INFO [restartedMain] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-04-04 16:04:48,442 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-04-04 16:04:48,450 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-04-04 16:04:48,459 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/forum'
+2023-04-04 16:04:48,466 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:61] Started ForumApplication in 1.227 seconds (JVM running for 1.66)
+2023-04-04 16:04:52,930 INFO [http-nio-8080-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/forum] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-04 16:04:52,931 INFO [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2023-04-04 16:04:52,931 INFO [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2023-04-04 16:04:52,948 INFO [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2023-04-04 16:04:53,007 INFO [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2023-04-04 16:09:02,417 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2023-04-04 16:09:02,422 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.

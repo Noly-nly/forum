@@ -36,10 +36,10 @@ public class HomeController {
         List<DiscussPost> list = discusssPostService.findDiscussPosts(0, page.getOffset(), page.getLimit());
         List<Map<String, Object>> discussPosts = new ArrayList<>();
         if(list != null) {
-            for(DiscussPost discussPost: list) {
+            for(DiscussPost post: list) {
                 Map<String, Object> map = new HashMap<>();
-                map.put("discussPost", discussPost);
-                User user = userService.findUserById(discussPost.getUserId());
+                map.put("post", post);
+                User user = userService.findUserById(post.getUserId());
                 map.put("user", user);
                 discussPosts.add(map);
             }
