@@ -244,3 +244,108 @@
 2023-04-05 20:44:07,963 INFO [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:123] HikariPool-2 - Start completed.
 2023-04-05 20:45:22,380 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:350] HikariPool-2 - Shutdown initiated...
 2023-04-05 20:45:22,383 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:352] HikariPool-2 - Shutdown completed.
+2023-04-05 21:59:12,178 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:55] Starting ForumApplication using Java 1.8.0_362 on Noly with PID 1840 (D:\Apps_IDE\Projects\forum\target\classes started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-05 21:59:12,179 INFO [restartedMain] com.noly.forum.ForumApplication [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-04-05 21:59:12,204 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-05 21:59:12,205 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-05 21:59:12,947 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-04-05 21:59:12,952 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-05 21:59:12,952 INFO [restartedMain] org.apache.catalina.core.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-04-05 21:59:12,953 INFO [restartedMain] org.apache.catalina.core.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-05 21:59:12,982 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/forum] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-04-05 21:59:12,982 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 777 ms
+2023-04-05 21:59:13,479 INFO [restartedMain] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-04-05 21:59:13,658 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-04-05 21:59:13,669 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-04-05 21:59:13,678 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/forum'
+2023-04-05 21:59:13,684 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:61] Started ForumApplication in 1.742 seconds (JVM running for 2.21)
+2023-04-05 21:59:23,799 INFO [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/forum] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-05 21:59:23,800 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2023-04-05 21:59:23,800 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2023-04-05 21:59:23,823 INFO [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2023-04-05 21:59:23,891 INFO [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2023-04-05 22:15:24,211 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2023-04-05 22:15:24,216 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2023-04-05 22:15:27,939 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:55] Starting ForumApplication using Java 1.8.0_362 on Noly with PID 18408 (D:\Apps_IDE\Projects\forum\target\classes started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-05 22:15:27,940 INFO [restartedMain] com.noly.forum.ForumApplication [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-04-05 22:15:27,964 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-05 22:15:27,964 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-05 22:15:28,579 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-04-05 22:15:28,583 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-05 22:15:28,584 INFO [restartedMain] org.apache.catalina.core.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-04-05 22:15:28,584 INFO [restartedMain] org.apache.catalina.core.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-05 22:15:28,614 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/forum] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-04-05 22:15:28,614 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 649 ms
+2023-04-05 22:15:28,960 INFO [restartedMain] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2023-04-05 22:15:29,077 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-04-05 22:15:29,088 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-04-05 22:15:29,098 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/forum'
+2023-04-05 22:15:29,104 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:61] Started ForumApplication in 1.389 seconds (JVM running for 1.854)
+2023-04-05 22:16:00,850 INFO [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/forum] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-05 22:16:00,850 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2023-04-05 22:16:00,851 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
+2023-04-05 22:16:00,861 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findLoginTicket].
+2023-04-05 22:16:00,872 INFO [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2023-04-05 22:16:00,933 INFO [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2023-04-05 22:16:00,959 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,969 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.DiscusssPostService.findDiscussPostRows].
+2023-04-05 22:16:00,980 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.DiscusssPostService.findDiscussPosts].
+2023-04-05 22:16:00,984 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,986 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,987 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,988 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,990 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,992 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,993 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,994 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,996 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:00,997 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[0:0:0:0:0:0:0:1],在[2023-04-05 22:16:00],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,073 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.DiscusssPostService.findDiscussPostRows].
+2023-04-05 22:16:49,076 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.DiscusssPostService.findDiscussPosts].
+2023-04-05 22:16:49,083 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,085 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,086 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,088 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,089 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,091 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,092 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,093 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,094 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:49,096 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:49],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,541 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.DiscusssPostService.findDiscussPostRows].
+2023-04-05 22:16:58,543 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.DiscusssPostService.findDiscussPosts].
+2023-04-05 22:16:58,545 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,546 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,547 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,548 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,549 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,550 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,551 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,552 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,555 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:16:58,556 INFO [http-nio-8080-exec-1] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:16:58],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,079 INFO [http-nio-8080-exec-7] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.login].
+2023-04-05 22:18:22,100 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findLoginTicket].
+2023-04-05 22:18:22,102 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,103 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.DiscusssPostService.findDiscussPostRows].
+2023-04-05 22:18:22,104 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.DiscusssPostService.findDiscussPosts].
+2023-04-05 22:18:22,106 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,107 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,108 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,110 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,111 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,111 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,112 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,116 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,116 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:22,117 INFO [http-nio-8080-exec-6] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:22],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:31,008 INFO [http-nio-8080-exec-5] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:31],访问了[com.noly.forum.service.UserService.findLoginTicket].
+2023-04-05 22:18:31,011 INFO [http-nio-8080-exec-5] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:31],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:31,016 INFO [http-nio-8080-exec-5] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:31],访问了[com.noly.forum.service.MessageService.findConversationCount].
+2023-04-05 22:18:31,022 INFO [http-nio-8080-exec-5] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:31],访问了[com.noly.forum.service.MessageService.findConversations].
+2023-04-05 22:18:31,027 INFO [http-nio-8080-exec-5] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:31],访问了[com.noly.forum.service.MessageService.findLetterCount].
+2023-04-05 22:18:31,030 INFO [http-nio-8080-exec-5] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:31],访问了[com.noly.forum.service.MessageService.findLetterUnreadCount].
+2023-04-05 22:18:31,032 INFO [http-nio-8080-exec-5] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:31],访问了[com.noly.forum.service.UserService.findUserById].
+2023-04-05 22:18:31,035 INFO [http-nio-8080-exec-5] com.noly.forum.aspect.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2023-04-05 22:18:31],访问了[com.noly.forum.service.MessageService.findLetterUnreadCount].
+2023-04-05 22:21:49,384 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2023-04-05 22:21:49,388 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
