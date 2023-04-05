@@ -1,6 +1,5 @@
 package com.noly.forum.controller;
 
-
 import com.noly.forum.entity.Message;
 import com.noly.forum.entity.Page;
 import com.noly.forum.entity.User;
@@ -8,7 +7,6 @@ import com.noly.forum.service.MessageService;
 import com.noly.forum.service.UserService;
 import com.noly.forum.util.ForumUtil;
 import com.noly.forum.util.HostHolder;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,6 +32,9 @@ public class MessageController {
     // 私信列表
     @RequestMapping(path = "/letter/list", method = RequestMethod.GET)
     public String getLetterList(Model model, Page page) {
+
+        // 造错，测试统一异常处理
+        // Integer.valueOf("abc");
 
         User user = hostHolder.getUser();
 
@@ -138,6 +139,10 @@ public class MessageController {
     @RequestMapping(path = "/letter/send", method = RequestMethod.POST)
     @ResponseBody
     public String sendLetter(String toName, String content) {
+
+        // 造错，测试统一异常处理
+        // Integer.valueOf("abc");
+
         User target = userService.findUserByName(toName);
         if (target == null) {
             return ForumUtil.getJSONSting(1, "目标用户不存在！");
