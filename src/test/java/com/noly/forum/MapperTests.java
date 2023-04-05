@@ -2,9 +2,11 @@ package com.noly.forum;
 
 import com.noly.forum.dao.DiscussPostMapper;
 import com.noly.forum.dao.LoginTicketMapper;
+import com.noly.forum.dao.MessageMapper;
 import com.noly.forum.dao.UserMapper;
 import com.noly.forum.entity.DiscussPost;
 import com.noly.forum.entity.LoginTicket;
+import com.noly.forum.entity.Message;
 import com.noly.forum.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,6 +31,9 @@ public class MapperTests {
 
     @Autowired
     private LoginTicketMapper loginTicketMapper;
+
+    @Autowired
+    private MessageMapper messageMapper;
 
     @Test
     public void testSelectUser() {
@@ -113,6 +118,29 @@ public class MapperTests {
         discussPost.setScore(111);
 
         discussPostMapper.insertDiscussPost(discussPost);
+    }
+
+    @Test
+    public void testSelectLetters() {
+        List<Message> list = messageMapper.selectConversations(111, 0, 20);
+        for (Message message : list) {
+            System.out.println(message);
+        }
+
+        int count = messageMapper.selectConversationCount(111);
+        System.out.println(count);
+
+        List<Message> list1 = messageMapper.selectLetters("111_112", 0, 20);
+        for (Message message : list1) {
+            System.out.println(message);
+        }
+
+        int count1 = messageMapper.selectLetterCount("111_112");
+        System.out.println(count1);
+
+        int count2 = messageMapper.selectLetterUnreadCount(131, "111_131");
+        System.out.println(count2);
+
     }
 
 }
