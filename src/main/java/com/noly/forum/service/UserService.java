@@ -210,4 +210,9 @@ public class UserService implements ForumConstant {
         return map;
     }
 
+    // 根据用户名查用户
+    public User findUserByName(String username) {
+        return userMapper.selectByName(username);
+    }
+
 }

@@ -6,6 +6,7 @@ import com.noly.forum.entity.Page;
 import com.noly.forum.entity.User;
 import com.noly.forum.service.MessageService;
 import com.noly.forum.service.UserService;
+import com.noly.forum.util.ForumUtil;
 import com.noly.forum.util.HostHolder;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 public class MessageController {
@@ -96,6 +95,13 @@ public class MessageController {
         // 私信目标
         model.addAttribute("target", getLetterTarget(conversationId));
 
+        // 获取未读的消息id
+        List<Integer> ids = getLetterIds(letterList);
+        // 设置为已读
+        if (!ids.isEmpty()) {
+            messageService.readMessage(ids);
+        }
+
         return "/site/letter-detail";
 
     }
@@ -112,5 +118,46 @@ public class MessageController {
             return userService.findUserById(id0);
         }
     }
+
+    // 获取未读的消息id
+    private List<Integer> getLetterIds(List<Message> letterList) {
+        List<Integer> ids = new ArrayList<>();
+
+        if (letterList != null) {
+            for (Message message: letterList) {
+                if (hostHolder.getUser().getId() == message.getToId() && message.getStatus() == 0) {
+                    ids.add(message.getId());
+                }
+            }
+        }
+
+        return ids;
+    }
+
+    // 发送私信
+    @RequestMapping(path = "/letter/send", method = RequestMethod.POST)
+    @ResponseBody
+    public String sendLetter(String toName, String content) {
+        User target = userService.findUserByName(toName);
+        if (target == null) {
+            return ForumUtil.getJSONSting(1, "目标用户不存在！");
+        }
+
+        Message message = new Message();
+        message.setFromId(hostHolder.getUser().getId());
+        message.setToId(target.getId());
+        if (message.getFromId() < message.getToId()) {
+            message.setConversationId(message.getFromId() + "_" + message.getToId());
+        } else {
+            message.setConversationId(message.getToId() + "_" + message.getFromId());
+        }
+        message.setContent(content);
+        message.setCreateTime(new Date());
+
+        messageService.addMessage(message);
+
+        return ForumUtil.getJSONSting(0);
+    }
+
 
 }
