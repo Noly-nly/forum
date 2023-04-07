@@ -6,6 +6,7 @@ import com.noly.forum.entity.Page;
 import com.noly.forum.entity.User;
 import com.noly.forum.service.CommentService;
 import com.noly.forum.service.DiscusssPostService;
+import com.noly.forum.service.LikeService;
 import com.noly.forum.service.UserService;
 import com.noly.forum.util.ForumConstant;
 import com.noly.forum.util.ForumUtil;
@@ -35,6 +36,9 @@ public class DiscussPostController implements ForumConstant {
 
     @Autowired
     private CommentService commentService;
+
+    @Autowired
+    private LikeService likeService;
 
     // 发表评论
     @RequestMapping(path = "/add", method = RequestMethod.POST)
@@ -66,6 +70,12 @@ public class DiscussPostController implements ForumConstant {
         // 作者
         User user = userService.findUserById(post.getUserId());
         model.addAttribute("user", user);
+        // 帖子点赞数
+        long likeCount = likeService.findEntityLikeCount(ENTITY_TYPE_POST, discussPostId);
+        model.addAttribute("likeCount", likeCount);
+        // 当前用户对帖子的点赞状态，如果当前用户没登录返回0
+        int likeStatus = hostHolder.getUser() == null ? 0 : likeService.findEntityLikeStatus(hostHolder.getUser().getId(), ENTITY_TYPE_POST, discussPostId);
+        model.addAttribute("likeStatus", likeStatus);
 
         // 评论分页信息
         page.setLimit(5);
@@ -86,6 +96,12 @@ public class DiscussPostController implements ForumConstant {
                 commentVo.put("comment", comment);
                 // 评论的作者
                 commentVo.put("user", userService.findUserById(comment.getUserId()));
+                // 评论点赞数
+                likeCount = likeService.findEntityLikeCount(ENTITY_TYPE_COMMENT, comment.getId());
+                commentVo.put("likeCount", likeCount);
+                // 当前用户对评论的点赞状态，如果当前用户没登录返回0
+                likeStatus = hostHolder.getUser() == null ? 0 : likeService.findEntityLikeStatus(hostHolder.getUser().getId(), ENTITY_TYPE_COMMENT, comment.getId());
+                commentVo.put("likeStatus", likeStatus);
 
                 // 回复列表
                 List<Comment> replyList = commentService.findCommentsByEntity(ENTITY_TYPE_COMMENT, comment.getId(), 0, Integer.MAX_VALUE);
@@ -102,6 +118,12 @@ public class DiscussPostController implements ForumConstant {
                         // 回复的目标
                         User target = reply.getTargetId() == 0 ? null : userService.findUserById(reply.getTargetId());
                         replyVo.put("target", target);
+                        // 回复点赞数
+                        likeCount = likeService.findEntityLikeCount(ENTITY_TYPE_COMMENT, reply.getId());
+                        replyVo.put("likeCount", likeCount);
+                        // 当前用户对回复的点赞状态，如果当前用户没登录返回0
+                        likeStatus = hostHolder.getUser() == null ? 0 : likeService.findEntityLikeStatus(hostHolder.getUser().getId(), ENTITY_TYPE_COMMENT, reply.getId());
+                        replyVo.put("likeStatus", likeStatus);
 
                         replyVoList.add(replyVo);
                     }
