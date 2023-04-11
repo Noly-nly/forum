@@ -2,6 +2,7 @@ package com.noly.forum.controller;
 
 import com.noly.forum.annotation.LoginRequired;
 import com.noly.forum.entity.User;
+import com.noly.forum.service.LikeService;
 import com.noly.forum.service.UserService;
 
 import com.noly.forum.util.ForumUtil;
@@ -47,6 +48,9 @@ public class UserController {
 
     @Autowired
     private HostHolder hostHolder;
+
+    @Autowired
+    private LikeService likeService;
 
     // 访问用户设置页面
     @LoginRequired
@@ -133,6 +137,24 @@ public class UserController {
             return "/site/setting";
 
         }
+    }
+
+    // 个人主页
+    @RequestMapping(path = "/profile/{userId}", method = RequestMethod.GET)
+    public String getProfilePage(@PathVariable("userId") int userId, Model model) {
+
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("该用户不存在！");
+        }
+
+        // 用户
+        model.addAttribute("user", user);
+        // 被点赞数量
+        int likeCount = likeService.findUserLikeCount(userId);
+        model.addAttribute("likeCount", likeCount);
+
+        return "/site/profile";
     }
 
 
