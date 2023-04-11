@@ -2,9 +2,11 @@ package com.noly.forum.controller;
 
 import com.noly.forum.annotation.LoginRequired;
 import com.noly.forum.entity.User;
+import com.noly.forum.service.FollowService;
 import com.noly.forum.service.LikeService;
 import com.noly.forum.service.UserService;
 
+import com.noly.forum.util.ForumConstant;
 import com.noly.forum.util.ForumUtil;
 import com.noly.forum.util.HostHolder;
 import org.apache.commons.lang3.StringUtils;
@@ -30,7 +32,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping( "/user")
-public class UserController {
+public class UserController implements ForumConstant {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -51,6 +53,9 @@ public class UserController {
 
     @Autowired
     private LikeService likeService;
+
+    @Autowired
+    private FollowService followService;
 
     // 访问用户设置页面
     @LoginRequired
@@ -153,6 +158,19 @@ public class UserController {
         // 被点赞数量
         int likeCount = likeService.findUserLikeCount(userId);
         model.addAttribute("likeCount", likeCount);
+
+        // 关注数量
+        Long followeeCount = followService.findFolloweeCount(userId, ENTITY_TYPE_USER);
+        model.addAttribute("followeeCount", followeeCount);
+        // 粉丝数量
+        long followerCount = followService.findFollowerCount(ENTITY_TYPE_USER, userId);
+        model.addAttribute("followerCount", followerCount);
+        // 是否已关注
+        boolean hasFollowed = false;
+        if (hostHolder.getUser() != null) {
+            hasFollowed = followService.hasFollowed(hostHolder.getUser().getId(), ENTITY_TYPE_USER, userId);
+        }
+        model.addAttribute("hasFollowed", hasFollowed);
 
         return "/site/profile";
     }
