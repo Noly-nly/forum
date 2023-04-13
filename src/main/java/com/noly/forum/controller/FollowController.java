@@ -1,7 +1,9 @@
 package com.noly.forum.controller;
 
+import com.noly.forum.entity.Event;
 import com.noly.forum.entity.Page;
 import com.noly.forum.entity.User;
+import com.noly.forum.event.EventProducer;
 import com.noly.forum.service.FollowService;
 import com.noly.forum.service.UserService;
 import com.noly.forum.util.ForumConstant;
@@ -30,6 +32,9 @@ public class FollowController implements ForumConstant {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private EventProducer eventProducer;
+
     @RequestMapping(path = "/follow", method = RequestMethod.POST)
     @ResponseBody
     public String follow(int entityType, int entityId) {
@@ -38,6 +43,15 @@ public class FollowController implements ForumConstant {
 
         // TODO： 应该增加拦截器拦截未登录用户的请求
         followService.follow(user.getId(), entityType,entityId);
+
+        // 触发关注事件
+        Event event = new Event()
+                .setTopic(TOPIC_FOLLOW)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(entityType)
+                .setEntityId(entityId)
+                .setEntityUserId(entityId);
+        eventProducer.fireEvent(event);
 
         return ForumUtil.getJSONSting(0, "已关注！");
     }

@@ -54,7 +54,11 @@ public class CommentService implements ForumConstant {
         }
 
         return rows;
+    }
 
+    // 通过id查询评论
+    public Comment findCommentById(int id) {
+        return commentMapper.selectCommentById(id);
     }
 
 
