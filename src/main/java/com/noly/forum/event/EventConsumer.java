@@ -6,7 +6,6 @@ import com.noly.forum.entity.Message;
 import com.noly.forum.service.MessageService;
 import com.noly.forum.util.ForumConstant;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.common.protocol.types.Field;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
