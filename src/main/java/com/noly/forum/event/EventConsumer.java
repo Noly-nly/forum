@@ -1,8 +1,11 @@
 package com.noly.forum.event;
 
 import com.alibaba.fastjson.JSONObject;
+import com.noly.forum.entity.DiscussPost;
 import com.noly.forum.entity.Event;
 import com.noly.forum.entity.Message;
+import com.noly.forum.service.DiscusssPostService;
+import com.noly.forum.service.ElasticsearchService;
 import com.noly.forum.service.MessageService;
 import com.noly.forum.util.ForumConstant;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -23,6 +26,12 @@ public class EventConsumer implements ForumConstant {
 
     @Autowired
     private MessageService messageService;
+
+    @Autowired
+    private DiscusssPostService discusssPostService;
+
+    @Autowired
+    private ElasticsearchService elasticsearchService;
 
     @KafkaListener(topics = {TOPIC_COMMENT, TOPIC_LIKE, TOPIC_FOLLOW} )
     public void handleCommentMessage(ConsumerRecord record) {
@@ -58,6 +67,25 @@ public class EventConsumer implements ForumConstant {
 
         message.setContent(JSONObject.toJSONString(content));
         messageService.addMessage(message);
+    }
+
+    // 消费发帖事件
+    @KafkaListener(topics = {TOPIC_PUBLISH})
+    public void handlePublishMessage(ConsumerRecord record) {
+
+        if (record == null || record.value() ==null) {
+            logger.error("消息内容为空！");
+            return;
+        }
+
+        Event event = JSONObject.parseObject(record.value().toString(), Event.class);
+        if (event == null) {
+            logger.error("消息格式错误！");
+            return;
+        }
+
+        DiscussPost post = discusssPostService.findDiscussPostById(event.getEntityId());
+        elasticsearchService.saveDiscussPost(post);
     }
 
 

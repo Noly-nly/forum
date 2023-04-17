@@ -1,0 +1,110 @@
+2023-04-14 21:46:10,769 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:55] Starting ForumApplication on Noly with PID 29844 (D:\Apps_IDE\Projects\forum\target\classes started by Noly in D:\Apps_IDE\Projects\forum)
+2023-04-14 21:46:10,779 INFO [restartedMain] com.noly.forum.ForumApplication [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2023-04-14 21:46:10,807 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-14 21:46:10,807 INFO [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-14 21:46:11,289 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-04-14 21:46:11,290 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2023-04-14 21:46:11,300 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 6ms. Found 0 Elasticsearch repository interfaces.
+2023-04-14 21:46:11,303 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-04-14 21:46:11,304 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2023-04-14 21:46:11,306 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
+2023-04-14 21:46:11,315 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-04-14 21:46:11,316 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-04-14 21:46:11,324 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2023-04-14 21:46:11,770 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-04-14 21:46:11,776 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-14 21:46:11,776 INFO [restartedMain] org.apache.catalina.core.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-04-14 21:46:11,776 INFO [restartedMain] org.apache.catalina.core.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-04-14 21:46:11,822 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/forum] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-04-14 21:46:11,822 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:285] Root WebApplicationContext: initialization completed in 1013 ms
+2023-04-14 21:46:12,448 INFO [restartedMain] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2023-04-14 21:46:12,508 INFO [restartedMain] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2023-04-14 21:46:12,908 INFO [restartedMain] org.springframework.data.elasticsearch.support.VersionInfo [VersionInfo.java:59] Version Spring Data Elasticsearch: 4.0.5.RELEASE
+2023-04-14 21:46:12,908 INFO [restartedMain] org.springframework.data.elasticsearch.support.VersionInfo [VersionInfo.java:60] Version Elasticsearch Client in build: 7.6.2
+2023-04-14 21:46:12,908 INFO [restartedMain] org.springframework.data.elasticsearch.support.VersionInfo [VersionInfo.java:61] Version Elasticsearch Client used: 7.6.2
+2023-04-14 21:46:12,908 INFO [restartedMain] org.springframework.data.elasticsearch.support.VersionInfo [VersionInfo.java:69] Version Elasticsearch cluster: 6.4.3
+2023-04-14 21:46:13,050 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2023-04-14 21:46:13,106 INFO [restartedMain] org.apache.kafka.clients.consumer.ConsumerConfig [AbstractConfig.java:347] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 3000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-04-14 21:46:13,141 INFO [restartedMain] org.apache.kafka.common.utils.AppInfoParser [AppInfoParser.java:117] Kafka version: 2.5.1
+2023-04-14 21:46:13,142 INFO [restartedMain] org.apache.kafka.common.utils.AppInfoParser [AppInfoParser.java:118] Kafka commitId: 0efa8fb0f4c73d92
+2023-04-14 21:46:13,142 INFO [restartedMain] org.apache.kafka.common.utils.AppInfoParser [AppInfoParser.java:119] Kafka startTimeMs: 1681479973140
+2023-04-14 21:46:13,143 INFO [restartedMain] org.apache.kafka.clients.consumer.KafkaConsumer [KafkaConsumer.java:974] [Consumer clientId=consumer-test-consumer-group-1, groupId=test-consumer-group] Subscribed to topic(s): comment, like, follow
+2023-04-14 21:46:13,145 INFO [restartedMain] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [ExecutorConfigurationSupport.java:181] Initializing ExecutorService
+2023-04-14 21:46:13,147 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-04-14 21:46:13,158 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/forum'
+2023-04-14 21:46:13,164 INFO [restartedMain] com.noly.forum.ForumApplication [StartupInfoLogger.java:61] Started ForumApplication in 2.648 seconds (JVM running for 3.661)
+2023-04-14 21:46:48,005 INFO [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.consumer.KafkaConsumer [KafkaConsumer.java:1082] [Consumer clientId=consumer-test-consumer-group-1, groupId=test-consumer-group] Unsubscribed all topics or patterns and assigned partitions
+2023-04-14 21:46:48,005 INFO [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService
+2023-04-14 21:46:48,008 INFO [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer [LogAccessor.java:292] test-consumer-group: Consumer stopped
+2023-04-14 21:46:48,012 INFO [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
