@@ -53,7 +53,7 @@ public class FollowController implements ForumConstant {
                 .setEntityUserId(entityId);
         eventProducer.fireEvent(event);
 
-        return ForumUtil.getJSONSting(0, "已关注！");
+        return ForumUtil.getJSONString(0, "已关注！");
     }
 
     @RequestMapping(path = "/unfollow", method = RequestMethod.POST)
@@ -65,7 +65,7 @@ public class FollowController implements ForumConstant {
         // TODO： 应该增加拦截器拦截未登录用户的请求
         followService.unfollow(user.getId(), entityType,entityId);
 
-        return ForumUtil.getJSONSting(0, "已取消关注！");
+        return ForumUtil.getJSONString(0, "已取消关注！");
     }
 
     @RequestMapping(path = "/followees/{userId}", method = RequestMethod.GET)

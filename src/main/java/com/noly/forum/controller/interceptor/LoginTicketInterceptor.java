@@ -6,6 +6,10 @@ import com.noly.forum.service.UserService;
 import com.noly.forum.util.CookieUtil;
 import com.noly.forum.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.context.SecurityContextImpl;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -37,6 +41,10 @@ public class LoginTicketInterceptor implements HandlerInterceptor {
                 User user = userService.findUserById(loginTicket.getUserId());
                 // 在本次请求中持有用户，暂存到hostHolder中，它里面采用ThreadLocal存储
                 hostHolder.setUser(user);
+                // 构建用户认证的结果,并存入SecurityContext,以便于Security进行授权.
+                Authentication authentication = new UsernamePasswordAuthenticationToken(
+                        user, user.getPassword(), userService.getAuthorities(user.getId()));
+                SecurityContextHolder.setContext(new SecurityContextImpl(authentication));
             }
         }
         return HandlerInterceptor.super.preHandle(request, response, handler);
@@ -54,6 +62,7 @@ public class LoginTicketInterceptor implements HandlerInterceptor {
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         hostHolder.clear();
-         HandlerInterceptor.super.afterCompletion(request, response, handler, ex);
+        SecurityContextHolder.clearContext();
+        HandlerInterceptor.super.afterCompletion(request, response, handler, ex);
     }
 }

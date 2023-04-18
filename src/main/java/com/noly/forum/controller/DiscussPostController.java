@@ -47,7 +47,7 @@ public class DiscussPostController implements ForumConstant {
     public String addDiscussPost(String title, String content) {
         User user = hostHolder.getUser();
         if (user == null) {
-            return ForumUtil.getJSONSting(403, "你还没有登录，请登录后再发帖？！");
+            return ForumUtil.getJSONString(403, "你还没有登录，请登录后再发帖？！");
         }
 
         DiscussPost post = new DiscussPost();
@@ -67,7 +67,7 @@ public class DiscussPostController implements ForumConstant {
 
         // TODO:报错的情况，将来统一处理
 
-        return ForumUtil.getJSONSting(0, "发布成功！");
+        return ForumUtil.getJSONString(0, "发布成功！");
     }
 
     // 显示帖子详情

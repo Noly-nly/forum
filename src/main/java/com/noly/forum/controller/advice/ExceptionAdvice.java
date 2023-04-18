@@ -29,7 +29,7 @@ public class ExceptionAdvice {
         if ("XMLHttpRequest".equals(xRequestedWith)) {
             response.setContentType("application/plain;charset=utf-8");
             PrintWriter writer = response.getWriter();
-            writer.write(ForumUtil.getJSONSting(1, "服务器异常！"));
+            writer.write(ForumUtil.getJSONString(1, "服务器异常！"));
         } else {
             response.sendRedirect(request.getContextPath() + "/error");
         }

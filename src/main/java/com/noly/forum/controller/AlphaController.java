@@ -193,7 +193,7 @@ public class AlphaController {
     public String testAjax(String name, int age) {
         System.out.println(name);
         System.out.println(age);
-        return ForumUtil.getJSONSting(0, "操作成功");
+        return ForumUtil.getJSONString(0, "操作成功");
     }
 
 }

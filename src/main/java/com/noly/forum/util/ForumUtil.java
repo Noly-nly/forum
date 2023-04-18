@@ -40,11 +40,11 @@ public class ForumUtil {
         return json.toJSONString();
     }
 
-    public static String getJSONSting(int code, String msg) {
+    public static String getJSONString(int code, String msg) {
         return getJSONSting(code, msg, null);
     }
 
-    public static String getJSONSting(int code) {
+    public static String getJSONString(int code) {
         return getJSONSting(code, null, null);
     }
 
