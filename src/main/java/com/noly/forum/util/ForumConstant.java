@@ -65,6 +65,11 @@ public interface ForumConstant {
     String TOPIC_PUBLISH = "publish";
 
     /**
+     * 主题：删贴
+     */
+    String TOPIC_DELETE = "delete";
+
+    /**
      * 系统用户ID
      */
     int SYSTEM_USER_ID = 1;

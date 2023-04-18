@@ -24,7 +24,7 @@ import java.util.*;
 public class DiscussPostController implements ForumConstant {
 
     @Autowired
-    private DiscusssPostService discusssPostService;
+    private DiscusssPostService discussPostService;
 
     @Autowired
     private HostHolder hostHolder;
@@ -55,7 +55,7 @@ public class DiscussPostController implements ForumConstant {
         post.setTitle(title);
         post.setContent(content);
         post.setCreateTime(new Date());
-        discusssPostService.addDiscussPost(post);
+        discussPostService.addDiscussPost(post);
 
         // 触发发帖事件
         Event event = new Event()
@@ -74,7 +74,7 @@ public class DiscussPostController implements ForumConstant {
     @RequestMapping(path = "/detail/{discussPostId}", method = RequestMethod.GET)
     public String getDiscussPost(@PathVariable("discussPostId") int discussPostId, Model model, Page page) {
         // 帖子
-        DiscussPost post = discusssPostService.findDiscussPostById(discussPostId);
+        DiscussPost post = discussPostService.findDiscussPostById(discussPostId);
         model.addAttribute("post", post);
         // 作者
         User user = userService.findUserById(post.getUserId());
@@ -151,6 +151,57 @@ public class DiscussPostController implements ForumConstant {
         model.addAttribute("comments", commentVoList);
 
         return "/site/discuss-detail";
+    }
+
+    // 置顶
+    @RequestMapping(path = "/top", method = RequestMethod.POST)
+    @ResponseBody
+    public String setTop(int id) {
+        discussPostService.updateType(id, 1);
+
+        // 触发发帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_PUBLISH)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(id);
+        eventProducer.fireEvent(event);
+
+        return ForumUtil.getJSONString(0);
+    }
+
+    // 加精
+    @RequestMapping(path = "/wonderful", method = RequestMethod.POST)
+    @ResponseBody
+    public String setWonderful(int id) {
+        discussPostService.updateStatus(id, 1);
+
+        // 触发发帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_PUBLISH)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(id);
+        eventProducer.fireEvent(event);
+
+        return ForumUtil.getJSONString(0);
+    }
+
+    // 删除
+    @RequestMapping(path = "/delete", method = RequestMethod.POST)
+    @ResponseBody
+    public String setDelete(int id) {
+        discussPostService.updateStatus(id, 2);
+
+        // 触发删帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_DELETE)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(id);
+        eventProducer.fireEvent(event);
+
+        return ForumUtil.getJSONString(0);
     }
 
 
