@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.noly.forum.entity.DiscussPost;
 import com.noly.forum.entity.Event;
 import com.noly.forum.entity.Message;
-import com.noly.forum.service.DiscusssPostService;
+import com.noly.forum.service.DiscussPostService;
 import com.noly.forum.service.ElasticsearchService;
 import com.noly.forum.service.MessageService;
 import com.noly.forum.util.ForumConstant;
@@ -28,7 +28,7 @@ public class EventConsumer implements ForumConstant {
     private MessageService messageService;
 
     @Autowired
-    private DiscusssPostService discusssPostService;
+    private DiscussPostService discussPostService;
 
     @Autowired
     private ElasticsearchService elasticsearchService;
@@ -84,7 +84,7 @@ public class EventConsumer implements ForumConstant {
             return;
         }
 
-        DiscussPost post = discusssPostService.findDiscussPostById(event.getEntityId());
+        DiscussPost post = discussPostService.findDiscussPostById(event.getEntityId());
         elasticsearchService.saveDiscussPost(post);
     }
 

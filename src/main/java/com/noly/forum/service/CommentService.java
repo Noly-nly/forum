@@ -23,7 +23,7 @@ public class CommentService implements ForumConstant {
     private SensitiveFilter sensitiveFilter;
 
     @Autowired
-    private DiscusssPostService discusssPostService;
+    private DiscussPostService discussPostService;
 
     public List<Comment> findCommentsByEntity(int entityType, int entityId, int offset, int limit) {
         return commentMapper.selectCommentsByEntity(entityType, entityId, offset, limit);
@@ -50,7 +50,7 @@ public class CommentService implements ForumConstant {
         // 更新帖子评论数量
         if (comment.getEntityType() == ENTITY_TYPE_POST) {
             int count = commentMapper.selectCountByEntity(comment.getEntityType(), comment.getEntityId());
-            discusssPostService.updateCommentCount(comment.getEntityId(), count);
+            discussPostService.updateCommentCount(comment.getEntityId(), count);
         }
 
         return rows;

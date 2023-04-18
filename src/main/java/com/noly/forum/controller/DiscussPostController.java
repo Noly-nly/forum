@@ -3,13 +3,15 @@ package com.noly.forum.controller;
 import com.noly.forum.entity.*;
 import com.noly.forum.event.EventProducer;
 import com.noly.forum.service.CommentService;
-import com.noly.forum.service.DiscusssPostService;
+import com.noly.forum.service.DiscussPostService;
 import com.noly.forum.service.LikeService;
 import com.noly.forum.service.UserService;
 import com.noly.forum.util.ForumConstant;
 import com.noly.forum.util.ForumUtil;
 import com.noly.forum.util.HostHolder;
+import com.noly.forum.util.RedisKeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +26,7 @@ import java.util.*;
 public class DiscussPostController implements ForumConstant {
 
     @Autowired
-    private DiscusssPostService discussPostService;
+    private DiscussPostService discussPostService;
 
     @Autowired
     private HostHolder hostHolder;
@@ -40,6 +42,11 @@ public class DiscussPostController implements ForumConstant {
 
     @Autowired
     private EventProducer eventProducer;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+
 
     // 发表评论
     @RequestMapping(path = "/add", method = RequestMethod.POST)
@@ -64,6 +71,10 @@ public class DiscussPostController implements ForumConstant {
                 .setEntityType(ENTITY_TYPE_POST)
                 .setEntityId(post.getId());
         eventProducer.fireEvent(event);
+
+        // 计算帖子分数
+        String redisKey = RedisKeyUtil.getPostScoreKey();
+        redisTemplate.opsForSet().add(redisKey, post.getId());
 
         // TODO:报错的情况，将来统一处理
 
@@ -183,6 +194,10 @@ public class DiscussPostController implements ForumConstant {
                 .setEntityType(ENTITY_TYPE_POST)
                 .setEntityId(id);
         eventProducer.fireEvent(event);
+
+        // 计算帖子分数
+        String redisKey = RedisKeyUtil.getPostScoreKey();
+        redisTemplate.opsForSet().add(redisKey, id);
 
         return ForumUtil.getJSONString(0);
     }

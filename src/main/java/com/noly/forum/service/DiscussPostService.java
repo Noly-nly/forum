@@ -10,7 +10,7 @@ import org.springframework.web.util.HtmlUtils;
 import java.util.List;
 
 @Service
-public class DiscusssPostService {
+public class DiscussPostService {
 
     @Autowired
     private DiscussPostMapper discussPostMapper;
@@ -20,9 +20,9 @@ public class DiscusssPostService {
 
 
     // 查询用户帖子
-    public List<DiscussPost> findDiscussPosts(int userId, int offset, int limit) {
+    public List<DiscussPost> findDiscussPosts(int userId, int offset, int limit, int orderMode) {
 
-        return discussPostMapper.selectDiscussPosts(userId, offset,limit);
+        return discussPostMapper.selectDiscussPosts(userId, offset,limit, orderMode);
     }
 
     // 查询用户帖子行数
@@ -62,6 +62,10 @@ public class DiscusssPostService {
 
     public int updateStatus(int id, int status) {
         return discussPostMapper.updateStatus(id, status);
+    }
+
+    public int updateScore(int id, double score) {
+        return discussPostMapper.updateScore(id, score);
     }
 
 }

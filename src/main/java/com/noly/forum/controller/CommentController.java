@@ -5,10 +5,12 @@ import com.noly.forum.entity.DiscussPost;
 import com.noly.forum.entity.Event;
 import com.noly.forum.event.EventProducer;
 import com.noly.forum.service.CommentService;
-import com.noly.forum.service.DiscusssPostService;
+import com.noly.forum.service.DiscussPostService;
 import com.noly.forum.util.ForumConstant;
 import com.noly.forum.util.HostHolder;
+import com.noly.forum.util.RedisKeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +32,10 @@ public class CommentController implements ForumConstant {
     private EventProducer eventProducer;
 
     @Autowired
-    private DiscusssPostService discusssPostService;
+    private DiscussPostService discussPostService;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @RequestMapping(path = "/add/{discussPostId}", method = RequestMethod.POST)
     public String addComment(@PathVariable("discussPostId") int discussPostId, Comment comment) {
@@ -48,7 +53,7 @@ public class CommentController implements ForumConstant {
                 .setEntityId(comment.getEntityId())
                 .setData("postId", discussPostId);
         if (comment.getEntityType() == ENTITY_TYPE_POST) {
-            DiscussPost target = discusssPostService.findDiscussPostById(comment.getEntityId());
+            DiscussPost target = discussPostService.findDiscussPostById(comment.getEntityId());
             event.setEntityUserId(target.getUserId()); 
         } else if (comment.getEntityType() == ENTITY_TYPE_COMMENT) {
             Comment target = commentService.findCommentById(comment.getEntityId());
@@ -64,8 +69,10 @@ public class CommentController implements ForumConstant {
                     .setEntityType(ENTITY_TYPE_POST)
                     .setEntityId(discussPostId);
             eventProducer.fireEvent(event);
+            // 计算帖子分数
+            String redisKey = RedisKeyUtil.getPostScoreKey();
+            redisTemplate.opsForSet().add(redisKey, discussPostId);
         }
-
 
         return "redirect:/discuss/detail/" + discussPostId;
 
