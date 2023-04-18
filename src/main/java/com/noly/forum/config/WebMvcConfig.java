@@ -1,9 +1,6 @@
 package com.noly.forum.config;
 
-import com.noly.forum.controller.interceptor.AlphaInterceptor;
-import com.noly.forum.controller.interceptor.LoginRequiredInterceptor;
-import com.noly.forum.controller.interceptor.LoginTicketInterceptor;
-import com.noly.forum.controller.interceptor.MessageInterceptor;
+import com.noly.forum.controller.interceptor.*;
 import com.noly.forum.dao.AlphaDao;
 import com.noly.forum.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +23,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired
     private MessageInterceptor messageInterceptor;
 
+    @Autowired
+    private DataInterceptor dataInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
@@ -40,6 +40,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
 //                .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");
 
         registry.addInterceptor(messageInterceptor)
+                .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");
+
+        registry.addInterceptor(dataInterceptor)
                 .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");
 
 
