@@ -67,7 +67,7 @@ public class LikeController implements ForumConstant {
             redisTemplate.opsForSet().add(redisKey, postId);
         }
 
-        return ForumUtil.getJSONSting(0, null, map);
+        return ForumUtil.getJSONString(0, null, map);
     }
 
 

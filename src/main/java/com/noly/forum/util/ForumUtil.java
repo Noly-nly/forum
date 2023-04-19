@@ -28,7 +28,7 @@ public class ForumUtil {
     }
 
     // code：编号，msg：提示，map：业务数据
-    public static String getJSONSting(int code, String msg, Map<String, Object> map) {
+    public static String getJSONString(int code, String msg, Map<String, Object> map) {
         JSONObject json = new JSONObject();
         json.put("code", code);
         json.put("msg", msg);
@@ -41,11 +41,11 @@ public class ForumUtil {
     }
 
     public static String getJSONString(int code, String msg) {
-        return getJSONSting(code, msg, null);
+        return getJSONString(code, msg, null);
     }
 
     public static String getJSONString(int code) {
-        return getJSONSting(code, null, null);
+        return getJSONString(code, null, null);
     }
 
 //    public static void main(String[] args) {
