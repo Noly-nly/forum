@@ -31,7 +31,7 @@ public class ShareController implements ForumConstant {
     @Autowired
     private EventProducer eventProducer;
 
-    @Value("${community.path.domain}")
+    @Value("${forum.path.domain}")
     private String domain;
 
     @Value("${server.servlet.context-path}")
